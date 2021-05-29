@@ -1,0 +1,113 @@
+.gallery {
+  display: flex;
+  justify-content: center;
+
+  background-image: linear-gradient(
+    to bottom,
+    $section-background-color 40%,
+    $body-background-color 40%,
+    $body-background-color 100%
+  );
+}
+
+.gallery-list {
+  display: flex;
+  width: 100%;
+}
+
+.gallery-column {
+  width: calc((100% - 5 * 2px) / 7);
+  @media screen and (min-width: 768px) {
+      width: calc((100% - 5 * 4px) / 7);
+  }
+  
+  @media screen and (min-width: 1200px) {
+      width: calc((100% - 5 * 8px) / 7);
+  }
+}
+
+
+.gallery-item-big {
+  width: calc((100% - 5 * 2px) / 7 * 2);
+  @media screen and (min-width: 768px) {
+      width: calc((100% - 5 * 4px) / 7 * 2);
+  }
+  
+  @media screen and (min-width: 1200px) {
+      width: calc((100% - 5 * 8px) / 7 * 2);
+  }
+}
+
+
+.gallery-column-1 {
+  padding-top: calc(((100% - 5 * 2px) / 7) * 0.95);
+}
+
+.gallery-column-2 {
+  padding-top: calc(((100% - 5 * 2px) / 7) * 0.55);
+}
+
+.gallery-column-4 {
+  padding-top: calc(((100% - 5 * 2px) / 7) * 0.7);
+}
+
+.gallery-column-5 {
+  padding-top: calc(((100% - 5 * 2px) / 7) * 0.5);
+}
+
+.gallery-column-6 {
+  padding-top: calc(((100% - 5 * 2px) / 7) * 1.1);
+}
+
+.gallery-pic-small {
+  width: calc((100% - 2px) / 2);
+  @media screen and (min-width: 768px) {
+      width: calc((100% - 4px) / 2);
+  }
+  
+  @media screen and (min-width: 1200px) {
+      width: calc((100% - 8px) / 2);
+  }
+}
+
+.gallery-column:not(:last-child) {
+  margin-right: 2px;
+  @media screen and (min-width: 768px) {
+      margin-right: 4px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+      margin-right: 8px;
+  }
+}
+.gallery-picture {
+  display: block;
+  &:not(:last-child) {
+    margin-bottom: 2px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 4px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.gallery-item {
+  border-radius: 5px;
+  overflow: hidden;
+  /* transform: scale(1); */
+  transition: transform 250ms linear;
+  
+  @media screen and (min-width: 768px) {
+      border-radius: 10px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+      border-radius: 20px;
+  }
+  &:hover {
+    transform: scale(1.25);
+  }
+}
